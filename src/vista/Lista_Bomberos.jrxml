@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Lista_Bomberos" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="719a26ce-dcd6-44f0-9f0a-e0f93c9aa721">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Bomberos"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tbbomberos where edad = 17]]>
+	</queryString>
+	<field name="NOMBRE_BOMBERO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOMBRE_BOMBERO"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOMBRE_BOMBERO"/>
+	</field>
+	<field name="EDAD" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="EDAD"/>
+		<property name="com.jaspersoft.studio.field.label" value="EDAD"/>
+	</field>
+	<field name="PESO" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PESO"/>
+		<property name="com.jaspersoft.studio.field.label" value="PESO"/>
+	</field>
+	<field name="CORREO_BOMBERO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CORREO_BOMBERO"/>
+		<property name="com.jaspersoft.studio.field.label" value="CORREO_BOMBERO"/>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{NOMBRE_BOMBERO}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6" uuid="17c8eb68-e3fd-478c-9b5c-392c5b679977"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Nombre bombero:]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6" uuid="ddaa4be9-5099-464f-adc7-5aa516fc46fd"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NOMBRE_BOMBERO}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="9c280488-80f8-42d3-adb6-4ea42b76c8ec"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[$F{EDAD}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement x="100" y="0" width="455" height="32" forecolor="#006699" uuid="67d50c34-9b23-4aec-b0d0-8c23c5bbe031"/>
+					<textElement>
+						<font size="22" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EDAD}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="100" height="20" forecolor="#666666" uuid="038a97a5-6100-4c08-8e8b-83fae5bc157e"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Edad:]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group3">
+		<groupExpression><![CDATA[$F{PESO}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement x="100" y="0" width="455" height="32" forecolor="#006699" uuid="7666f8e1-6ce7-4e9b-82fe-226089784a42"/>
+					<textElement>
+						<font size="20" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PESO}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="100" height="20" forecolor="#666666" uuid="cfa4e1a2-4fa8-4d79-82a3-645ae572f284"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Peso:]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group4">
+		<groupExpression><![CDATA[$F{CORREO_BOMBERO}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement x="100" y="0" width="455" height="32" forecolor="#006699" uuid="7058b39c-0191-4e10-9c70-68ccf8d02fc3"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CORREO_BOMBERO}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="100" height="20" forecolor="#666666" uuid="bf9fe56d-85c6-46d0-b23c-a3880bc4ccbe"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Correo bombero:]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="4c4d11c6-a8e0-4352-b5f9-92962616d976"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="7dca2b1a-8048-437e-960e-630474c246f9"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="294e27d5-f5e9-4bb9-9694-a64cec83ca44"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="88b37aa4-2284-4c7b-bf0a-d951174ea2d4"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20"/>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17"/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
